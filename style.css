@@ -1,0 +1,101 @@
+/*basic styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #2c3e50;
+}
+body {
+  font-family: 'Inconsolata', monospace;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2%;
+  line-height: 1.6;
+  text-align: center;
+  height: 3000px;
+}
+
+h3 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+
+.flex-container {
+  border: 1px solid white;
+  max-width: 900px;
+}
+
+.flex-item {
+  border: 2px solid olivedrab;
+}
+
+
+/* FlexBox Stuff*/
+
+/* .flex-container {
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+} */
+/* .flex-container {
+  height: 300px;
+  display: flex;
+  flex-flow: row-reverse;
+ } */
+/* .flex-container {
+  height: 300px;
+  display: flex;
+  flex-flow: column-reverse;
+ } */
+
+/* flex wrap */
+/* .flex-container {
+  height: 300px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap-reverse;
+} */
+/* .flex-container {
+    height: 300px;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: flex-end;
+}
+ */
+
+/* flex-items are stretched vertically by default */
+/* .flex-container {
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+  align-items: center; 
+  justify-content: center;
+} */
+
+/* align single items */
+
+.flex-container {
+  height: 300px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-item-1 {
+  align-self: stretch;
+}
+
+.flex-item-2 {
+  align-self: center;
+}
+
+.flex-item-3 {
+  align-self: flex-end;
+}
+
+.flex-item-4 {
+  align-self: flex-start;
+}

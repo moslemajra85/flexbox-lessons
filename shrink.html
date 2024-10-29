@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /*basic styles*/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #2c3e50;
+      }
+      body {
+        font-family: 'Inconsolata', monospace;
+        color: white;
+        width: 80%;
+        margin: 0 auto;
+        padding: 2%;
+        line-height: 1.6;
+        text-align: center;
+        height: 3000px;
+      }
+
+      .flex-container {
+        max-width: 900px;
+        border: 1px solid white;
+      }
+
+      h3 {
+        font-size: 1.8em;
+        text-transform: uppercase;
+      }
+
+      .flex-container {
+        height: 300px;
+        display: flex;
+      }
+
+      .flex-item {
+        width: 300px;
+        flex-shrink: 0;
+      }
+
+      .flex-item-1 {
+        background-color: red;
+      }
+      .flex-item-2 {
+        /* flex-shrink: 10; */
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item-1 flex-item">One</div>
+      <div class="flex-item-2 flex-item">Two</div>
+    </div>
+  </body>
+</html>

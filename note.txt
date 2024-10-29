@@ -1,0 +1,161 @@
+When you set the flex container to flex
+all  flex items will be moved to the left and the width 
+of each item will depend on its content
+
+.flex-container {
+    display: flex
+}
+
+
+/* Core Css Flexbox */
+
+Every time you define a flex container that will also
+define a flow direction of the elements inside that container.
+
+There are two flow directions:
+
+1-row: applied as default when you define the flex container and it basically
+align items horizontally
+
+2-column: align items vertically
+to do so we use the property flex-flow and set it to column
+
+.flex-container {
+    display: flex;
+    flex-flow: column;
+}
+
+when the flex-flow is set to row which is the default value then two
+imaginary axis are generated
+
+.flex-container {
+  height: 300px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between
+}
+
+
+.flex-container {
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between
+}
+
+
+// flex-flow: row-reverse
+
+{
+    flex-flow: row-reverse
+}
+// flip the items horizontally and push them away to the end
+
+{
+    flex-flow: column-reverse
+}
+
+
+/* flex wrap */
+// you need to add more flex items to see it in actions
+// by default all flexbox container are single line containers
+// meaning the flex items will always be displayed in one single line
+.flex-container {
+  height: 300px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+flex-wrap:wrap-reverse  // will flip the lines and it doesnt affect the elements
+
+
+// Aligning elements
+
+justify-content property is a main-axis property that control how the 
+remaining space in the container will be distributed around the flex
+items if there is any remaining space in the container
+It wont do anything if the container has no free space
+
+it is applied to the flex container
+
+try these values when flex-flow is row and column
+and When the flex-flow is set to row-reverse or column-reverse
+values: flex-start
+        flex-end
+        center
+        space-between
+        space-around
+
+// aligning single element
+
+align-items and align-self are similar:
+1-they both  work on the cross axis
+2-they accept the same value
+
+// they are different in
+1-align-self affect a single flex element
+2-align-items affect all the children of the flex container
+
+
+
+align-content will work if your container will have multiple lines
+it will affect the lines not the flex items, it will help you
+distribute the remaining space between those lines
+
+
+// Sizing flex items
+By Default the element's width will depend on its content
+
+flex-grow take numbers as value and it is used to determine
+how much the flex item will grow relative to rest of the flex item
+how much space the element will take from the remaining space relative 
+to the other elements
+
+
+{
+  flex-grow: 1
+}
+
+The free space will be distributed equally among the items
+for example if the width of the first element was 50px according
+to its content then its width now 75px and if the the width of the 
+second item was 100px its width now is 125px
+
+the default value for flex-grow is 0 and it simply means that 
+the default width of the element will depend in its content
+
+
+// with flex-grow we can make one element expand and takes up
+the entire free space while the other elements wont change
+
+we can set the flex-grow property of one item to 1
+and set the others to 0
+
+if the flex-flow is row it will control the width
+if the flex-flow is column it wikk control the height
+
+setting flex-shrink to zero forces the element not shrink
+below its width
+
+setting flex-wrap to wrap
+and flex-shrink: 0
+elements will wrap to th next line and prevent element to shrink
+below a certain width
+
+
+// flex-basis
+tells the browser to start the width of specific element at
+a specific width
+default value is auto
+0 will make the element ignore their content and makes irs flex item
+having the same width
+
+
+{
+  flex-grow: 1; // will make the free space distributed equally
+  flex-basis: 0;// ignore their width
+}
+
+
+flex: flew-grow flex-shrink flex-basis
